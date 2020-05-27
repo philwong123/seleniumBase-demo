@@ -1,0 +1,31 @@
+# Nebula configurations
+http:
+  host: ""
+  port: "80"
+  resource:
+    AccessControlMasterService:
+      acManagerTaskList: "/engine/access-control-process-master/v1/tasks?page_request.offset=0&page_request.limit=100&page_request.total=100"
+      acManagerTaskDelete: "/engine/access-control-process-master/v1/tasks/{task_id}"
+    TDComparisonService:
+      tdManagerTaskList: "/engine/tailing-detection-comparison-service/v1/tasks?page_request.offset=0&page_request.limit=100&page_request.total=100"
+      tdManagerTaskDelete: "/engine/tailing-detection-comparison-service/v1/tasks/{task_id}"
+    VideoProcessService:
+      videoProcessTaskList: "/engine/video-process/v1/tasks?page_request.offset=0&page_request.limit=100&page_request.total=100"
+      videoProcessTaskDelete: "/engine/video-process/v1/tasks/{task_id}"
+    StaticFeatureDBProxy:
+      staticDBDBList: "/engine/alert-feature/v1/databases"
+      staticDBDBDelete: "/engine/alert-feature/v1/databases/{db_id}"
+    ObjectStorageGateway:
+      infraOSGListBuckets: "/components/osg-default/v1"
+      infraOSGCreateBucket: "/components/osg-default/v1"
+    ImageIngressService:
+      imageIngressTaskList: "/engine/image-ingress/v1/tasks?page_request.offset=0&page_request.limit=100&page_request.total=100"
+      imageIngressTaskDelete: "/engine/image-ingress/v1/tasks/{task_id}"
+
+# all basic buckets
+buckets:
+  - "GLOBAL"
+  - "keeper_face"
+  - "video_face"
+  - "video_panoramic"
+  - "image_face"

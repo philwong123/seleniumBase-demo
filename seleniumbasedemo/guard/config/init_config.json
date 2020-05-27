@@ -1,0 +1,462 @@
+{
+    "default": {
+        "frontend": {
+            "host": "",
+            "username": "admin",
+            "password": "Guard)(*123456"
+        },
+        "database": {
+            "host": "",
+            "port": 6446,
+            "user": "senseguard",
+            "password": "UVlY88m9suHLsthK",
+            "database": "senseguard"
+        },
+        "map": {
+            "path": "./data/map/"
+        }
+    },
+    "api": {
+        "senseguard-oauth2": {
+            "login": {
+                "method": "POST",
+                "path": "/senseguard-oauth2/api/v1/login",
+                "payload": {
+                    "username": "",
+                    "password": ""
+                }
+            }
+        },
+        "senseguard-device-management": {
+            "addDeviceGroup": {
+                "method": "POST",
+                "path": "/senseguard-device-management/api/v1/device-groups",
+                "payload": {
+                    "name": "",
+                    "parentId": 0,
+                    "remark": ""
+                }
+            },
+            "addDevice": {
+                "method": "POST",
+                "path": "/senseguard-device-management/api/v1/devices",
+                "payload": {
+                    "deviceType": 1,
+                    "name": "",
+                    "groupId": "",
+                    "point": "",
+                    "userIds": [],
+                    "floorId": "",
+                    "ID": ""
+                }
+            }
+        },
+        "senseguard-map-management": {
+            "addMapLevel": {
+                "method": "POST",
+                "path": "/senseguard-map-management/api/v1/floor",
+                "payload": {
+                    "name": "",
+                    "parentId": "",
+                    "remark": ""
+                }
+            },
+            "uploadMap": {
+                "method": "POST",
+                "path": "/senseguard-map-management/api/v1/floor/upload/{id}",
+                "payload": {
+                    "file": ""
+                }
+            }
+        },
+        "senseguard-watchlist-management": {
+            "addLibrary": {
+                "method": "POST",
+                "path": "/senseguard-watchlist-management/api/v1/libraries",
+                "payload": {
+                    "name": "",
+                    "type": ""
+                }
+            }
+        },
+        "senseguard-uums": {
+            "addOrg": {
+                "method": "POST",
+                "path": "/senseguard-uums/api/v1/orgs",
+                "payload": {
+                    "name": "",
+                    "parentId": "",
+                    "remark": ""
+                }
+            },
+            "addUser": {
+                "method": "POST",
+                "path": "/senseguard-uums/api/v1/users",
+                "payload": {
+                    "username": "",
+                    "address": "",
+                    "age": null,
+                    "company": "",
+                    "dept": "",
+                    "deviceIds": [],
+                    "gender": 1,
+                    "ID": "",
+                    "orgId": 1,
+                    "password": "888888",
+                    "telephone": "",
+                    "realname": "",
+                    "state": 1,
+                    "remark": "",
+                    "roleId": 1
+                }
+            }
+        },
+        "senseguard-bulk-tool": {
+            "addTotalFileName": {
+                "method": "POST",
+                "path": "/senseguard-bulk-tool/api/v1/target/addTotalFileName",
+                "payload": {
+                    "folderUrl": "",
+                    "activationDate": "2019-04-01 00:00:00",
+                    "expirationDate": "2020-04-01 00:00:00",
+                    "libraryId": "",
+                    "userId": 6,
+                    "libraryType": "",
+                    "fileName": []
+                }
+            },
+            "batchAddTarget": {
+                "method": "POST",
+                "path": "/senseguard-bulk-tool/api/v1/target/addTargetBulkTool",
+                "payload": {
+                    "taskId": "",
+                    "groupName": "",
+                    "libraryId": "",
+                    "libraryType": "",
+                    "userId": 6,
+                    "activationDate": "2019-04-01 00:00:00",
+                    "expirationDate": "2020-04-01 00:00:00",
+                    "currentRequestNum": "",
+                    "requestTotalNum": "",
+                    "fileTotalNumber": ""
+                }
+            }
+        }
+    },
+    "libraries": [{
+        "name": "模拟视频人像库",
+        "type": 1,
+        "img_path": "/data/Shin/Company/SenseNebula-Guard/DATA/Libraries/模拟视频人像库/"
+    }, {
+        "name": "百汇园白名单",
+        "type": 1,
+        "img_path": "./data/library/百汇园白名单/"
+    }, {
+        "name": "百汇园黑名单",
+        "type": 2,
+        "img_path": "./data/library/百汇园黑名单/"
+    }, {
+        "name": "whitelist",
+        "type": 1,
+        "size": 0,
+        "number": 0,
+        "img_path": "/data/Shin/Libraries/RWS1A/img_100w_201803_unzipped/Image/"
+    }, {
+        "name": "blacklist",
+        "type": 2,
+        "size": 0,
+        "number": 0,
+        "img_path": "/data/Shin/Libraries/RWS1A/img_100w_201804_unzipped/Image/"
+    }],
+    "users": [{
+        "username": "fengkan",
+        "realname": "Kan FENG",
+        "org_name": "sensetime"
+    }, {
+        "username": "yuanxiaolu",
+        "realname": "袁晓露",
+        "org_name": "sensetime"
+    }, {
+        "username": "yangjie",
+        "realname": "杨颉",
+        "org_name": "sensetime"
+    }, {
+        "username": "liuhuazhou",
+        "realname": "刘华洲",
+        "org_name": "sensetime"
+    }, {
+        "username": "dongfei",
+        "realname": "董飞",
+        "org_name": "sensetime"
+    }, {
+        "username": "wangbin",
+        "realname": "王滨",
+        "org_name": "sensetime"
+    }, {
+        "username": "wangkai",
+        "realname": "王凯",
+        "org_name": "sensetime"
+    }, {
+        "username": "hyatt",
+        "realname": "张选滔",
+        "org_name": "sensetime"
+    }, {
+        "username": "sunran",
+        "realname": "孙冉",
+        "org_name": "sensetime"
+    }, {
+        "username": "huangyanan",
+        "realname": "黄雅楠",
+        "org_name": "sensetime"
+    }, {
+        "username": "zhuwenqin",
+        "realname": "祝文琴",
+        "org_name": "sensetime"
+    }, {
+        "username": "wangji",
+        "realname": "王霁",
+        "org_name": "sensetime"
+    },{
+        "username": "lihui",
+        "realname": "李辉",
+        "org_name": "sensetime"
+    },{
+        "username": "wangye",
+        "realname": "王晔",
+        "org_name": "sensetime"
+    }, {
+        "username": "apitest",
+        "realname": "API Tester",
+        "org_name": "karate"
+    }, {
+        "username": "cypress",
+        "realname": "UI Tester",
+        "org_name": "cypress"
+    }, {
+        "username": "selenium",
+        "realname": "Selenium Base",
+        "org_name": "Default"
+    }, {
+        "username": "wangxinxin",
+        "realname": "王欣鑫",
+        "org_name": "sensetime"
+    }, {
+        "username": "yangjie1",
+        "realname": "杨颉测试号",
+        "org_name": "sensetime"
+    }, {
+        "username": "shin",
+        "realname": "SHiN",
+        "org_name": "sensetime"
+    }, {
+        "username": "liqian",
+        "realname": "李倩",
+        "org_name": "sensetime"
+    }, {
+        "username": "liyiliang",
+        "realname": "Yi Liang LI",
+        "org_name": "sensetime"
+    }, {
+        "username": "libo",
+        "realname": "Bo LI",
+        "org_name": "sensetime"
+    }, {
+        "username": "lijun",
+        "realname": "Jun LI",
+        "org_name": "sensetime"
+    }, {
+        "username": "zhangzhen",
+        "realname": "Zhen ZHANG",
+        "org_name": "sensetime"
+    }, {
+        "username": "xuyoulong",
+        "realname": "You Long XU",
+        "org_name": "sensetime"
+    }, {
+        "username": "fanjunliang",
+        "realname": "Jun Liang FAN",
+        "org_name": "sensetime"
+    }, {
+        "username": "esther",
+        "realname": "Esther",
+        "org_name": "sensetime"
+    }, {
+        "username": "huangsiwei",
+        "realname": "Si Wei HUANG",
+        "org_name": "sensetime"
+    }, {
+        "username": "wuzhiyong",
+        "realname": "Zhi Yong WU",
+        "org_name": "sensetime"
+    }, {
+        "username": "xushuxun",
+        "realname": "许树勋",
+        "org_name": "sensetime"
+    }, {
+        "username": "tester",
+        "realname": "测试账号",
+        "org_name": "test",
+        "number": 10
+    }],
+    "keepers": [{
+        "type": "SenseID",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "ID020S18D00756",
+        "point": "[174.73,970.3]"
+    },{
+        "type": "SenseID",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "ID020S18D00530",
+        "point": "[374.73,310.3]"
+    }, {
+        "type": "SenseKeeper",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "SKP03018L00550",
+        "point": "[619.0,881.0]"
+    }, {
+        "type": "SensePass",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "SPS01018H00121",
+        "point": "[621.0,853.0]"
+    }, {
+        "type": "SensePass",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "SPS01018H00469",
+        "point": "[596.0,891.0]"
+    },  {
+        "type": "SensePass",
+        "parent_floor": "新洲大楼",
+        "floor_name": "新洲大楼四楼",
+        "device_name": "SPS020STDC19C00106",
+        "point": "[595.0,894.0]"
+    }, {
+        "type": "SenseKeeper",
+        "parent_floor": "新洲大楼",
+        "floor_name": "SenseKeeper模拟",
+        "device_name": "keeper",
+        "point": "[0.0,0.0]",
+        "number": 0
+    }],
+    "cameras": [
+        {
+            "type": "rtsp",
+            "parent_floor": "新洲大楼",
+            "floor_name": "新洲大楼四楼",
+            "device_name": "3-03 3楼大办公区西南茶水间玻璃门",
+            "rtsp_address": "rtsp://admin:admin123@10.5.4.119:554",
+            "point": "[604.25,366.9]"
+        },
+        { 
+            "type": "dlc",
+            "parent_floor": "新洲大楼",
+            "floor_name": "新洲大楼五楼",
+            "device_name": "海康抓拍机-新",
+            "ip": "confidence.116.199",
+            "port": 8000,
+            "username": "admin",
+            "password": "admin1234",
+            "point": "[850.00,550.00]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.170",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.170:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.171",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.171:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.172",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.172:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.173",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.173:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.174",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.174:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.175",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.175:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.176",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.176:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.177",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.177:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.178",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.178:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.179",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.179:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.180",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.180:554",
+            "point": "[0.0,0.0]"
+        },
+        {
+            "type": "rtsp",
+            "parent_floor": "深圳",
+            "floor_name": "深圳测试楼层",
+            "device_name": "172.20.101.181",
+            "rtsp_address": "rtsp://admin:admin1234@172.20.101.181:554",
+            "point": "[0.0,0.0]"
+        }
+    ]
+}
